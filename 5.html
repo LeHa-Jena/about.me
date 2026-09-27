@@ -217,7 +217,7 @@ nav.scrolled{background:rgba(251,249,244,.94);backdrop-filter:blur(56px) saturat
 
 /* CHAPTER - GOM GỌN */
 .chapter{max-width:680px;margin:0 auto;padding:72px 26px;position:relative;z-index:1}
-.ch-num{font-family:'Playfair Display',serif;font-size:13px;font-style:italic;color:#5c2630;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px}
+.ch-num{font-family:'Be Vietnam Pro';font-weight:600;font-size:13px;font-style:italic;color:#ac8238;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px}
 .chapter h2{font-size:clamp(26px,4.2vw,36px);line-height:1.15;letter-spacing:-.01em;margin-bottom:18px}
 .chapter p{font-size:13.8px;line-height:1.65;letter-spacing:.01em;color:var(--ink-soft);margin:0 0 14px;font-weight:300}
   .chapter p strong, .chapter p b{
@@ -270,46 +270,16 @@ footer{border-top:1px solid #e9e1d5;padding:40px 26px;text-align:center;color:#9
 <nav id="nav"><div class="navrow"><div class="brand" onclick="window.scrollTo({top:0,behavior:'smooth'})">LÊ HÀ <span>·</span></div><button class="menu-btn" id="menuBtn">MENU</button></div></nav>
 <div class="menu-overlay" id="menuOverlay"></div>
 <div class="menu-panel" id="menuPanel">
-  <details class="menu-group">
-    <summary>Câu Chuyện</summary>
-    <a class="menu-sub" href="#story">Mở đầu</a>
-    <details class="menu-subgroup">
-      <summary class="sub-summary">01 · Một chút về tôi</summary>
-      <a class="menu-sub" href="#ch1">Nhìn người lớn chuẩn bị</a>
-      <details class="menu-subgroup level3">
-        <summary class="sub-summary">Mục con con của con con</summary>
-        <a class="menu-sub" href="#ch1"></a>
-        <a class="menu-sub" href="#ch1">Đám giỗ</a>
-        <a class="menu-sub" href="#ch1">Đứng ở bếp</a>
-        <details class="menu-subgroup level3">
-          <summary class="sub-summary">Con con con nữa</summary>
-          <a class="menu-sub" href="#ch1">Chi tiết bếp</a>
-          <a class="menu-sub" href="#ch1">Chi tiết khách</a>
-        </details>
-      </details>
-    </details>
-    <details class="menu-subgroup">
-      <summary class="sub-summary">02 · Ngành Dịch Vụ</summary>
-      <a class="menu-sub" href="#ch2">Học nghề từ hiện trường</a>
-      <a class="menu-sub" href="#ch2">EARLY / BUILD / LEAD</a>
-    </details>
-    <a class="menu-sub" href="#ch3">03 · Golf, Sự Kiện</a>
-  </details>
-  <details class="menu-group">
-    <summary>Cách Tôi Vận Hành</summary>
-    <a class="menu-sub" href="#howiwork">Nguyên tắc giữ vững</a>
-  </details>
-  <details class="menu-group">
-    <summary>Dự Án</summary>
-    <a class="menu-sub" href="#projects">GolfCare⁺ Asia</a>
-  </details>
-  <details class="menu-group">
-    <summary>Ghi Chép</summary>
-    <details class="menu-subgroup">
-      <summary class="sub-summary">Vườn viết</summary>
-      <a class="menu-sub" href="#howiwork">Một ngày làm giải đấu</a>
-    </details>
-  </details>
+  <details class="menu-group" open>
+  <summary>Câu Chuyện</summary>
+  
+  <a class="menu-sub" href="#story">Mở đầu</a>
+  <a class="menu-sub" href="#ch1">01 · Một chút về tôi</a>
+  <a class="menu-sub" href="#ch2">02 · Ngành Dịch Vụ</a>
+  <a class="menu-sub" href="#ch3">03 · Golf x Event</a>
+  <a class="menu-sub" href="#ch4">04 · Event x Marketing</a>
+
+</details>
 </div>
 
 <section class="hero">
