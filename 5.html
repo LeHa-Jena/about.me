@@ -163,9 +163,9 @@ nav.scrolled{background:rgba(251,249,244,.94);backdrop-filter:blur(56px) saturat
 .menu-group summary{list-style:none;cursor:pointer;padding:13px 12px;display:flex;justify-content:space-between;align-items:center;font-family:'Playfair Display',serif;font-size:14px;font-weight:600}
 .menu-group summary::-webkit-details-marker{display:none}
 .menu-group summary::after{content:"+";color:var(--gold);font-size:16px;transition:transform .3s}
-.menu-group[open] summary::after{transform:rotate(45deg)}
-.menu-subgroup{margin-left:14px;border-left:1px dotted #e9e1d5}
-.menu-subgroup summary.sub-summary{font-size:13px;font-weight:500;padding:10px 12px;cursor:pointer;display:flex;justify-content:space-between}
+.menu-group summary::after{transform:rotate(45deg);font-family:'Be Vietnam Pro'}
+.menu-subgroup{font-family:'Be Vietnam Pro';margin-left:14px;border-left:1px dotted #e9e1d5}
+.menu-subgroup summary.sub-summary{font-family:'Be Vietnam Pro';font-size:13px;font-weight:500;padding:10px 12px;cursor:pointer;display:flex;justify-content:space-between}
 .menu-subgroup summary.sub-summary::after{content:"+";color:var(--gold)}
 .menu-subgroup[open] summary.sub-summary::after{transform:rotate(45deg)}
 .menu-subgroup.level3{margin-left:12px}
@@ -274,13 +274,10 @@ footer{border-top:1px solid #e9e1d5;padding:40px 26px;text-align:center;color:#9
     <summary>Câu Chuyện</summary>
     <a class="menu-sub" href="#story">Mở đầu</a>
     <details class="menu-subgroup">
-      <summary class="sub-summary">01 · Một chút về tôi</summary>
-      <a class="menu-sub" href="#ch1">Nhìn người lớn chuẩn bị</a>
+      <summary class="sub-summary" href="#ch1">01 · Một chút về tôi</summary>
       <details class="menu-subgroup level3">
-        <summary class="sub-summary">Mục con con của con con</summary>
-        <a class="menu-sub" href="#ch1">Bữa cơm đông người</a>
-        <a class="menu-sub" href="#ch1">Đám giỗ</a>
-        <a class="menu-sub" href="#ch1">Đứng ở bếp</a>
+        <summary class="sub-summary"></summary>
+        <a class="menu-sub" href="#ch1"></a>
         <details class="menu-subgroup level3">
           <summary class="sub-summary">Con con con nữa</summary>
           <a class="menu-sub" href="#ch1">Chi tiết bếp</a>
