@@ -347,7 +347,7 @@ const THEME_GLOBAL = {
 const HEADER_CONFIG = {
   bg: "transparent",
   bgScrolled: "transparent",
-  blur: "200px",
+  blur: "150px",
   border: "transparent",
   height: "64px",
   top: "12px",
@@ -374,14 +374,14 @@ const MENU_CONFIG = {
       { label: " ", href: "#beginning", desc: "" },
     ]},
     { label: "02 · Ngành dịch vụ", href: "#hospitality", desc: "Hospitality", children: [
-      { label: "02.1 Bùi Viện days", href: "#hospitality", desc: "/bai-viet/bui-vien" },
-      { label: "02.2 GM journey", href: "#hospitality", desc: "/bai-viet/gm-journey" },
+      { label: "", href: "", desc: "" },
+      { label: "", href: "", desc: "" },
     ]},
     { label: "03 · Golf", href: "#golf", desc: "Golf", children: [
       { label: "03.1 GolfCare+", href: "#projects", desc: "/bai-viet/golfcare" },
       { label: "03.2 Golf279", href: "#projects", desc: "/bai-viet/golf279" },
     ]},
-    { label: "04 · Sự kiện", href: "#events", desc: "Events", children: [
+    { label: "04 · Event", href: "#events", desc: "Events", children: [
       { label: "04.1 Làm sự kiện", href: "#events", desc: "/bai-viet/lam-su-kien" },
       { label: "04.2 Marketing", href: "#events", desc: "/bai-viet/marketing" },
     ]},
@@ -391,10 +391,10 @@ const MENU_CONFIG = {
       { label: "05.3 Kết nối", href: "#now", desc: "/bai-viet/ket-noi" },
     ]},
     { label: "06 · Nguyên tắc", href: "#principles", desc: "Principles" },
-    { label: "07 · Dự án", href: "#projects", desc: "Works", children: [
-      { label: "07.1 NTC Furniture", href: "#projects", desc: "/case/ntc" },
-      { label: "07.2 Leon Home", href: "#projects", desc: "/case/leon-home" },
-      { label: "07.3 Events & Partnerships", href: "#projects", desc: "/case/partnerships" },
+    { label: "07 · Projects", href: "#projects", desc: "Works", children: [
+      { label: "07.1 NTC Furniture", href: "#projects", desc: "/projects/ntc" },
+      { label: "07.2 Leon Home", href: "#projects", desc: "/projects/leon-home" },
+      { label: "07.3 Events & Partnerships", href: "#projects", desc: "/projects/partnerships" },
     ]},
     { label: "08 · Đang xây", href: "#building", desc: "Building" },
   ],
@@ -428,7 +428,7 @@ const BG_CONFIG = {
   particleColor: "rgba(30,27,24,0.13)",
   lineColor: "rgba(30,27,24,0.05)",
   lineDistance: 148,
-  speed: 0.32,
+  speed: 0.50,
   interactiveRadius: 160,
   orbGoldFactor: 0.045,
   rippleColor: "#ca833976",
@@ -671,12 +671,6 @@ const email=document.getElementById('emailText'); if(email){ email.style.cursor=
 
 const slider=document.getElementById('projectSlider'); if(slider){ let down=false,start=0,left=0; slider.addEventListener('mousedown',e=>{down=true;start=e.pageX-slider.offsetLeft;left=slider.scrollLeft;slider.classList.add('dragging')}); window.addEventListener('mouseup',()=>{down=false;slider.classList.remove('dragging')}); slider.addEventListener('mouseleave',()=>{down=false;slider.classList.remove('dragging')}); slider.addEventListener('mousemove',e=>{if(!down)return; e.preventDefault(); const x=e.pageX-slider.offsetLeft; slider.scrollLeft=left-(x-start)*1.25}); }
 </script>
-
-<!-- DEVTOOL CHO DIEN THOAI - Search: ERUDA MOBILE - Nam truoc </body>, icon hien goc duoi phai -->
-<script src="https://cdn.jsdelivr.net/npm/eruda@3.0.1/eruda.min.js"></script>
-<script>
-eruda.init();
-console.log('%cEruda mobile devtools da bat - bam icon banh rang goc duoi phai de mo','color:#6b1d2a;font-weight:bold');
 // FIX EP MAU H2 EM H3 EM BANG JS - Search: FIX H2 EM JS
 document.addEventListener('DOMContentLoaded', ()=>{
   setTimeout(()=>{
