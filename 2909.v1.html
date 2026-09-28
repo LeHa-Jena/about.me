@@ -1,6 +1,6 @@
 <!--
 KEYWORD MAP - Ctrl+F để tìm nhanh
-THEME_GLOBAL -> màu chung, font, radius, shadow toàn site | Global tokens
+_GLOBAL -> màu chung, font, radius, shadow toàn site | Global tokens
 HEADER_CONFIG -> header trong suốt, logo LÊ HÀ đã xóa hình tròn | Transparent header, no circle
 MENU_CONFIG -> menu drawer phải | Menu drawer
 CARD_CONFIG -> card visit chạm lật đã fix quay lại + lock size | Flip card fixed
@@ -10,7 +10,7 @@ TEXT_ANIM_CONFIG -> text reveal chạy lên | Text animation
 .big-number -> số 01 02 03 04 05 06 to | Numbers 01-06 bigger
 FIX H1 H2 H3 -> h1 h2 h3 đen thẳng, h2 em h3 em đỏ đô nghiêng | H1 H2 H3 black straight, em wine italic
 CARD FIX 4 -> logic lật card | Card flip fix
-QUICK EDIT: Đổi màu toàn site -> THEME_GLOBAL, Đổi Hero -> HERO_CONFIG, Đổi số 01-06 -> .big-number, Đổi header trong suốt -> HEADER_CONFIG
+QUICK EDIT: Đổi màu toàn site -> _GLOBAL, Đổi Hero -> HERO_CONFIG, Đổi số 01-06 -> .big-number, Đổi header trong suốt -> HEADER_CONFIG
 -->
 <!DOCTYPE html>
 <html lang="vi">
@@ -20,9 +20,9 @@ QUICK EDIT: Đổi màu toàn site -> THEME_GLOBAL, Đổi Hero -> HERO_CONFIG, 
 <title>Lê Hà</title>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:wght@300;400;500;600&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
-/* // // ZONE 0: THEME_GLOBAL - BRIEF: Mau font bo goc shadow chung | Global colors fonts radii shadows - La goc thiet ke toan web | Is global design tokens
-   // EDITABLE: Chinh o THEME_GLOBAL trong <script> | Edit at THEME_GLOBAL in <script>
-   // FIX AT: Day la root Search: THEME_GLOBAL | Root colors */
+/* // // ZONE 0: _GLOBAL - BRIEF: Mau font bo goc shadow chung | Global colors fonts radii shadows - La goc thiet ke toan web | Is global design tokens
+   // EDITABLE: Chinh o _GLOBAL trong <script> | Edit at _GLOBAL in <script>
+   // FIX AT: Day la root Search: _GLOBAL | Root colors */
 :root{
   --bg:#fbf9f4; --paper:#f3eee5; --paper-2:#fffdf8; --ink:#1e1b18; --ink-soft:#625b54; --muted:#938a80;
   --wine:#5c2630; --wine-deep:#6b1d2a; --gold:#c9a86a; --gold-soft:#e8dbc1; --blue:#6b1d2a; --blue-soft:rgba(166, 28, 50, 0.1803921568627451);
@@ -38,12 +38,12 @@ body{margin:0;width:100%;max-width:100vw;background:var(--bg);color:var(--ink);f
 body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;z-index:20;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E")}
 p{margin:0} a{color:inherit;text-decoration:none} ::selection{background:var(--gold);color:#fff}
 /* // // SECTION 0: H-HEADING vs H-EM - BRIEF: H thang den Playfair, H em nghieng wine Instrument | H straight black Playfair, H em italic wine Instrument - Dong bo H1 H2 H3 H4 | Sync H1 H2 H3 H4 - Fix font loi h1em h2em | Fix font broken h1em h2em
-   // EDITABLE: Chinh mau o THEME_GLOBAL | Edit colors at THEME_GLOBAL
-   // FIX AT: Neu doi mau chung sua o THEME_GLOBAL Search: THEME_GLOBAL | If global color edit at THEME_GLOBAL */
-/* FIX H1 H2 H3 DEN THANG - h2 em h3 em NGHIENG DO DO - Search: THEME_GLOBAL */
+   // EDITABLE: Chinh mau o _GLOBAL | Edit colors at _GLOBAL
+   // FIX AT: Neu doi mau chung sua o _GLOBAL Search: _GLOBAL | If global color edit at _GLOBAL */
+/* FIX H1 H2 H3 DEN THANG - h2 em h3 em NGHIENG DO DO - Search: _GLOBAL */
 h1,h2,h3{color:#0f0d0c !important;color:var(--ink) !important;font-style:normal !important;font-weight:400 !important;letter-spacing:-.04em;line-height:1.}
-h4{font-family:var(--font-display);font-weight:500;margin:0;font-style:normal !important;color:var(--ink) !important;letter-spacing:-.04em;line-height:1.2;font-size:clamp(20px,2.5vw,28px);}
-h1{font-size:clamp(40px,7vw,82px);}
+h4{font-family:var(--font-display);font-weight:500;margin:0;font-style:normal !important;color:var(--ink) !important;letter-spacing:-.04em;line-height:1.1;font-size:clamp(18px,2.5vw,26px);}
+h1{font-size:clamp(30px,7vw,72px);}
 h2{font-size:clamp(30px,5.5vw,60px);}
 h3{font-size:clamp(25px,3vw,36px);}
 h1 em, h2 em, h3 em, h4 em, h1 i, h2 i, h3 i{
@@ -67,7 +67,7 @@ h1 em, h2 em, h3 em, h4 em, h1 i, h2 i, h3 i{
 
 /* // // SECTION 1: HEADER - BRIEF: Logo + menu sticker #6b1d2a3e trong suot | #6b1d2a52 translucent sticker header - La thanh dieu huong tren cung | Is top sticky nav
    // EDITABLE: Chinh o HEADER_CONFIG | Edit at HEADER_CONFIG
-   // FIX AT: Neu doi mau chung sua o THEME_GLOBAL Search: THEME_GLOBAL | If global color edit at THEME_GLOBAL */
+   // FIX AT: Neu doi mau chung sua o _GLOBAL Search: _GLOBAL | If global color edit at _GLOBAL */
 .nav{position:fixed;top:12px;left:50%;transform:translateX(-50%);width:min(calc(100% - 24px), var(--max));z-index:90;padding:0 18px 0 20px;height:64px;display:flex;align-items:center;justify-content:space-between;border-radius:999px;border:1px solid transparent;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;transition:all .4s var(--ease-out)}
 .nav.scrolled{top:8px;background:transparent;box-shadow:none;border-color:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}
 .nav-row{width:100%;display:flex;align-items:center;justify-content:space-between}
@@ -80,7 +80,7 @@ h1 em, h2 em, h3 em, h4 em, h1 i, h2 i, h3 i{
 
 /* // // SECTION 2: MENU - BRIEF: Menu drawer phai trong suot co submenu | Right translucent drawer with submenu - Fix mobile phai keo ngang | Fix mobile overflow
    // EDITABLE: Chinh o MENU_CONFIG | Edit at MENU_CONFIG
-   // FIX AT: Neu doi mau chung sua o THEME_GLOBAL Search: THEME_GLOBAL | If global color edit at THEME_GLOBAL */
+   // FIX AT: Neu doi mau chung sua o _GLOBAL Search: _GLOBAL | If global color edit at _GLOBAL */
 .menu-overlay{position:fixed;inset:0;z-index:94;background:rgba(30,27,24,0.12);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);opacity:0;pointer-events:none;transition:.5s var(--ease-out)}
 .menu-overlay.open{opacity:1;pointer-events:auto}
 .menu-panel{position:fixed;top:0;right:0;width:380px;max-width:calc(100vw - 12px);height:100dvh;height:100svh;z-index:95;background:rgba(251,249,244,0.78);backdrop-filter:blur(22px) saturate(1.4);-webkit-backdrop-filter:blur(22px) saturate(1.4);border-left:1px solid rgba(0,0,0,0.06);box-shadow:-20px 0 80px rgba(0,0,0,0.08);transform:translateX(100%);transition:transform .68s var(--ease-out);display:flex;flex-direction:column;padding:92px 24px 24px;overflow-y:auto;box-sizing:border-box}
@@ -110,7 +110,7 @@ h1 em, h2 em, h3 em, h4 em, h1 i, h2 i, h3 i{
 
 /* // // SECTION 3: CARD - BRIEF: Card visit 3D lat cham do do | Slow flip burgundy card - Mat sau do do noi dung hay | Burgundy back creative
    // EDITABLE: Chinh o CARD_CONFIG | Edit at CARD_CONFIG
-   // FIX AT: Neu doi mau chung sua o THEME_GLOBAL Search: THEME_GLOBAL | If global color edit at THEME_GLOBAL */
+   // FIX AT: Neu doi mau chung sua o _GLOBAL Search: _GLOBAL | If global color edit at _GLOBAL */
 .card-stage{display:flex;justify-content:center;align-items:center;perspective:1600px;position:relative;z-index:4;width:100%}
 .card-wrap{width:min(var(--card-width),100%);height:min(236px, 60vw);min-height:180px;perspective:none;position:relative}
 .business-card{width:100%;height:100%;aspect-ratio:1.58/1;position:relative;transform-style:preserve-3d;cursor:grab;will-change:transform;transition:transform 1.25s cubic-bezier(.77,0,.175,1)}
@@ -149,7 +149,7 @@ h1 em, h2 em, h3 em, h4 em, h1 i, h2 i, h3 i{
 
 /* // // SECTION 4: BG - BRIEF: Nen dong + cham khoi dong | Dynamic bg + block hover - Canvas + ripple + tilt | Is dynamic background
    // EDITABLE: Chinh o BG_CONFIG | Edit at BG_CONFIG
-   // FIX AT: Neu doi mau chung sua o THEME_GLOBAL Search: THEME_GLOBAL | If global color edit at THEME_GLOBAL */
+   // FIX AT: Neu doi mau chung sua o _GLOBAL Search: _GLOBAL | If global color edit at _GLOBAL */
 .site-width{width:min(var(--max),100%);margin:0 auto;padding-left:28px;padding-right:28px}
 .story-block{width:min(var(--reading),100%);margin:0 auto;padding:112px 28px;position:relative;transition:transform .7s var(--ease-out), box-shadow .7s;will-change:transform}
 .story-block--wide{width:min(1040px,100%)}
@@ -221,7 +221,7 @@ footer{border-top:1px solid var(--line);padding:32px 28px 45px;display:flex;just
 
 /* // // SECTION 5: TEXT_ANIM - BRIEF: Chu chay len khi scroll toi | Text up on scroll - Luot toi dau chu chay toi do | Scroll triggered text
    // EDITABLE: Chinh o TEXT_ANIM_CONFIG | Edit at TEXT_ANIM_CONFIG
-   // FIX AT: Neu doi mau chung sua o THEME_GLOBAL Search: THEME_GLOBAL | If global color edit at THEME_GLOBAL */
+   // FIX AT: Neu doi mau chung sua o _GLOBAL Search: _GLOBAL | If global color edit at _GLOBAL */
 .text-reveal-wrap{overflow:hidden;display:block;will-change:transform}
 .text-reveal-inner{display:block;transform:translateY(115%) rotate(1deg);opacity:0;transition:transform 0.95s var(--ease-out), opacity .6s var(--ease-out);transform-origin:left bottom}
 .text-reveal-wrap.in .text-reveal-inner{transform:translateY(0) rotate(0);opacity:1}
@@ -322,12 +322,12 @@ body h1 i, body h2 i, body h3 i,
 
 <script>
 /* =====================================================================
-   ZONE 0: THEME_GLOBAL
+   ZONE 0: _GLOBAL
    ===================================================================== */
-// // SECTION 0: THEME_GLOBAL - BRIEF: Mau font shadow chung | Global tokens - La goc thiet ke toan web | Is global design system
-// EDITABLE: Chinh truc tiep o THEME_GLOBAL | Edit at THEME_GLOBAL
-// FIX AT: Day la root Search: THEME_GLOBAL | If global color edit here Search: THEME_GLOBAL
-const THEME_GLOBAL = {
+// // SECTION 0: _GLOBAL - BRIEF: Mau font shadow chung | Global tokens - La goc thiet ke toan web | Is global design system
+// EDITABLE: Chinh truc tiep o _GLOBAL | Edit at _GLOBAL
+// FIX AT: Day la root Search: _GLOBAL | If global color edit here Search: _GLOBAL
+const _GLOBAL = {
   colors: {
     bg: "#fbf9f4", paper: "#f3eee5", ink: "#1e1b18", inkSoft: "#625b54", wine: "#5c2630", wineDeep: "#6b1d2a",
     gold: "#c9a86a", blue: "#2563eb", blueSoft: "rgba(59,130,246,0.14)", menuBg: "rgba(251,249,244,0.78)",
@@ -343,7 +343,7 @@ const THEME_GLOBAL = {
    ===================================================================== */
 // // SECTION 1: HEADER_CONFIG - BRIEF: Header #0000ff10 sticker trong suot | Blue translucent sticker - Thanh tren cung | Is top sticky nav
 // EDITABLE: Chinh o HEADER_CONFIG | Edit at HEADER_CONFIG
-// FIX AT: Neu doi mau chung sua o THEME_GLOBAL Search: THEME_GLOBAL | If global color edit at THEME_GLOBAL
+// FIX AT: Neu doi mau chung sua o _GLOBAL Search: _GLOBAL | If global color edit at _GLOBAL
 const HEADER_CONFIG = {
   bg: "transparent",
   bgScrolled: "transparent",
@@ -357,7 +357,7 @@ const HEADER_CONFIG = {
 
 // // SECTION 2: MENU_CONFIG - BRIEF: Drawer phai trong suot co submenu san link bai | Right translucent drawer with submenus - Fix mobile keo ngang | Fix mobile overflow bug
 // EDITABLE: Chinh o MENU_CONFIG | Edit at MENU_CONFIG
-// FIX AT: Neu doi mau chung sua o THEME_GLOBAL Search: THEME_GLOBAL | If global color edit at THEME_GLOBAL
+// FIX AT: Neu doi mau chung sua o _GLOBAL Search: _GLOBAL | If global color edit at _GLOBAL
 const MENU_CONFIG = {
   bg: "rgba(251,249,244,0.78)",
   blur: "22px",
@@ -403,7 +403,7 @@ const MENU_CONFIG = {
 
 // // SECTION 3: CARD_CONFIG - BRIEF: Card 3D lat cham 1.25s do do | Slow flip burgundy - Noi dung hay | Creative English back
 // EDITABLE: Chinh o CARD_CONFIG | Edit at CARD_CONFIG
-// FIX AT: Neu doi mau chung sua o THEME_GLOBAL Search: THEME_GLOBAL | If global color edit at THEME_GLOBAL
+// FIX AT: Neu doi mau chung sua o _GLOBAL Search: _GLOBAL | If global color edit at _GLOBAL
 const CARD_CONFIG = {
   flipDuration: "1.25s",
   flipEasing: "cubic-bezier(.77,0,.175,1)",
@@ -422,7 +422,7 @@ const CARD_CONFIG = {
 
 // // SECTION 4: BG_CONFIG - BRIEF: Nen dong hat noi + cham khoi dong | Dynamic particles + interactive blocks - Canvas + ripple | Is dynamic bg
 // EDITABLE: Chinh o BG_CONFIG | Edit at BG_CONFIG
-// FIX AT: Neu doi mau chung sua o THEME_GLOBAL Search: THEME_GLOBAL | If global color edit at THEME_GLOBAL
+// FIX AT: Neu doi mau chung sua o _GLOBAL Search: _GLOBAL | If global color edit at _GLOBAL
 const BG_CONFIG = {
   particleCount: 62,
   particleColor: "rgba(30,27,24,0.13)",
@@ -438,7 +438,7 @@ const BG_CONFIG = {
 
 // // SECTION 5: TEXT_ANIM_CONFIG - BRIEF: Chu chay len khi scroll toi | Text runs up on scroll - Luot toi dau chay toi do | Scroll text up effect
 // EDITABLE: Chinh o TEXT_ANIM_CONFIG | Edit at TEXT_ANIM_CONFIG
-// FIX AT: Neu doi mau chung sua o THEME_GLOBAL Search: THEME_GLOBAL | If global color edit at THEME_GLOBAL
+// FIX AT: Neu doi mau chung sua o _GLOBAL Search: _GLOBAL | If global color edit at _GLOBAL
 const TEXT_ANIM_CONFIG = {
   duration: "0.95s",
   easing: "cubic-bezier(.16,1,.3,1)",
@@ -455,7 +455,7 @@ const TEXT_ANIM_CONFIG = {
 
 // // SECTION 1: HEADER - BRIEF: Logo + nut menu #6b1d2a sticker | #6b1d2a sticker header - Thanh tren cung | Is top nav
 // EDITABLE: Chinh o HEADER_CONFIG | Edit at HEADER_CONFIG
-// FIX AT: Neu doi mau chung sua o THEME_GLOBAL Search: THEME_GLOBAL | If global color edit at THEME_GLOBAL
+// FIX AT: Neu doi mau chung sua o _GLOBAL Search: _GLOBAL | If global color edit at _GLOBAL
 function renderHeader(){
   const nav=document.getElementById('nav');
   nav.style.background=HEADER_CONFIG.bg;
@@ -472,7 +472,7 @@ function renderHeader(){
 
 // // SECTION 2: MENU - BRIEF: Menu drawer phai trong suot co submenu dong | Translucent drawer - Fix loi dt phai keo ngang | Fix mobile overflow bug
 // EDITABLE: Chinh o MENU_CONFIG | Edit at MENU_CONFIG
-// FIX AT: Neu doi mau chung sua o THEME_GLOBAL Search: THEME_GLOBAL | If global color edit at THEME_GLOBAL
+// FIX AT: Neu doi mau chung sua o _GLOBAL Search: _GLOBAL | If global color edit at _GLOBAL
 function renderMenu(){
   const panel=document.getElementById('menuPanel');
   const overlay=document.getElementById('menuOverlay');
@@ -487,7 +487,7 @@ function renderMenu(){
       ${subHTML}
     </div>`;
   }).join('');
-  panel.innerHTML=`<div class="menu-items">${itemsHTML}</div><div class="menu-foot"><div>${MENU_CONFIG.footer.email} · ${MENU_CONFIG.footer.phone}</div><div>${MENU_CONFIG.footer.note}</div><div style="display:flex;gap:8px;margin-top:6px"><span style="width:8px;height:8px;border-radius:50%;background:${THEME_GLOBAL.colors.blue};display:inline-block"></span><span>${MENU_CONFIG.blur}</span></div></div>`;
+  panel.innerHTML=`<div class="menu-items">${itemsHTML}</div><div class="menu-foot"><div>${MENU_CONFIG.footer.email} · ${MENU_CONFIG.footer.phone}</div><div>${MENU_CONFIG.footer.note}</div><div style="display:flex;gap:8px;margin-top:6px"><span style="width:8px;height:8px;border-radius:50%;background:${_GLOBAL.colors.blue};display:inline-block"></span><span>${MENU_CONFIG.blur}</span></div></div>`;
   function closeMenu(){panel.classList.remove('open');overlay.classList.remove('open');btn.classList.remove('open');document.body.style.overflow='';}
   function openMenu(){panel.classList.add('open');overlay.classList.add('open');btn.classList.add('open');document.body.style.overflow='hidden';}
   btn.addEventListener('click',e=>{e.stopPropagation();panel.classList.contains('open')?closeMenu():openMenu();});
@@ -504,7 +504,7 @@ function renderMenu(){
 
 // // SECTION 3: CARD - BRIEF: Card visit lat cham mat sau do do | Slow flip burgundy - Content tieng Anh hay | Creative back
 // EDITABLE: Chinh o CARD_CONFIG | Edit at CARD_CONFIG
-// FIX AT: Neu doi mau chung sua o THEME_GLOBAL Search: THEME_GLOBAL | If global color edit at THEME_GLOBAL
+// FIX AT: Neu doi mau chung sua o _GLOBAL Search: _GLOBAL | If global color edit at _GLOBAL
 function renderCard(){
   const mount=document.getElementById('cardMount');
   const f=CARD_CONFIG.content.front, b=CARD_CONFIG.content.back;
@@ -528,7 +528,7 @@ function renderCard(){
 
 // // SECTION 4: BG - BRIEF: Nen dong toan trang + cham khoi dong | Fullpage dynamic bg + block interactive - Canvas particle | Is dynamic bg
 // EDITABLE: Chinh o BG_CONFIG | Edit at BG_CONFIG
-// FIX AT: Neu doi mau chung sua o THEME_GLOBAL Search: THEME_GLOBAL | If global color edit at THEME_GLOBAL
+// FIX AT: Neu doi mau chung sua o _GLOBAL Search: _GLOBAL | If global color edit at _GLOBAL
 function renderBG(){
   const canvas=document.getElementById('bgCanvas'); const ctx=canvas.getContext('2d');
   let w,h,particles=[],mouse={x:-9999,y:-9999};
@@ -567,7 +567,7 @@ function renderBG(){
 
 // // SECTION 5: TEXT_ANIM - BRIEF: Chu chay len khi scroll toi | Text up on scroll - Luot toi dau chay toi do | Scroll triggered text
 // EDITABLE: Chinh o TEXT_ANIM_CONFIG | Edit at TEXT_ANIM_CONFIG
-// FIX AT: Neu doi mau chung sua o THEME_GLOBAL Search: THEME_GLOBAL | If global color edit at THEME_GLOBAL
+// FIX AT: Neu doi mau chung sua o _GLOBAL Search: _GLOBAL | If global color edit at _GLOBAL
 function initTextAnim(){
   const els=document.querySelectorAll('.story-block h2, .story-block p, .story-quote, .hero h1, .hero-lead, .eyebrow, .closing-copy, .closing-quote, .pull-line, .projects-intro h2, .projects-intro p');
   els.forEach((el,i)=>{
