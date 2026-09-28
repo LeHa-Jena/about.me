@@ -346,7 +346,7 @@ const MENU_CONFIG = {
     ]},
     { label: "08 · Đang xây", href: "#building", desc: "Building" },
   ],
-  footer: { email: "leha.pm@golfcare.asia", phone: "+84 98 3351 744", note: "Glass · Blue sticker · Scroll text up" }
+  footer: { email: "leha.pm@golfcare.asia", phone: "+84 98 3351 744", note: "" }
 };
 
 // // SECTION 3: CARD_CONFIG - BRIEF: Card 3D lat cham 1.25s do do | Slow flip burgundy - Noi dung hay | Creative English back
@@ -435,7 +435,7 @@ function renderMenu(){
       ${subHTML}
     </div>`;
   }).join('');
-  panel.innerHTML=`<div class="menu-items">${itemsHTML}</div><div class="menu-foot"><div>${MENU_CONFIG.footer.email} · ${MENU_CONFIG.footer.phone}</div><div>${MENU_CONFIG.footer.note}</div><div style="display:flex;gap:8px;margin-top:6px"><span style="width:8px;height:8px;border-radius:50%;background:${THEME_GLOBAL.colors.blue};display:inline-block"></span><span>Nền trong suốt ${MENU_CONFIG.blur} · Submenu sẵn link bài viết</span></div></div>`;
+  panel.innerHTML=`<div class="menu-items">${itemsHTML}</div><div class="menu-foot"><div>${MENU_CONFIG.footer.email} · ${MENU_CONFIG.footer.phone}</div><div>${MENU_CONFIG.footer.note}</div><div style="display:flex;gap:8px;margin-top:6px"><span style="width:8px;height:8px;border-radius:50%;background:${THEME_GLOBAL.colors.blue};display:inline-block"></span><span>${MENU_CONFIG.blur}</span></div></div>`;
   function closeMenu(){panel.classList.remove('open');overlay.classList.remove('open');btn.classList.remove('open');document.body.style.overflow='';}
   function openMenu(){panel.classList.add('open');overlay.classList.add('open');btn.classList.add('open');document.body.style.overflow='hidden';}
   btn.addEventListener('click',e=>{e.stopPropagation();panel.classList.contains('open')?closeMenu():openMenu();});
