@@ -81,9 +81,10 @@ h1 em, h2 em, h3 em, h4 em, h1 i, h2 i, h3 i{
 /* // // SECTION 2: MENU - BRIEF: Menu drawer phai trong suot co submenu | Right translucent drawer with submenu - Fix mobile phai keo ngang | Fix mobile overflow
    // EDITABLE: Chinh o MENU_CONFIG | Edit at MENU_CONFIG
    // FIX AT: Neu doi mau chung sua o _GLOBAL Search: _GLOBAL | If global color edit at _GLOBAL */
+   /* chieu ngang menu width:350px;*/
 .menu-overlay{position:fixed;inset:0;z-index:94;background:rgba(30,27,24,0.12);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);opacity:0;pointer-events:none;transition:.5s var(--ease-out)}
 .menu-overlay.open{opacity:1;pointer-events:auto}
-.menu-panel{position:fixed;top:0;right:0;width:380px;max-width:calc(100vw - 12px);height:100dvh;height:100svh;z-index:95;background:rgba(251,249,244,0.78);backdrop-filter:blur(22px) saturate(1.4);-webkit-backdrop-filter:blur(22px) saturate(1.4);border-left:1px solid rgba(0,0,0,0.06);box-shadow:-20px 0 80px rgba(0,0,0,0.08);transform:translateX(100%);transition:transform .68s var(--ease-out);display:flex;flex-direction:column;padding:92px 24px 24px;overflow-y:auto;box-sizing:border-box}
+.menu-panel{position:fixed;top:0;right:0;width:350px;max-width:calc(100vw - 12px); height:100dvh;height:100svh;z-index:95;background:rgba(251,249,244,0.78);backdrop-filter:blur(22px) saturate(1.4);-webkit-backdrop-filter:blur(22px) saturate(1.4);border-left:1px solid rgba(0,0,0,0.06);box-shadow:-20px 0 80px rgba(0,0,0,0.08);transform:translateX(100%);transition:transform .68s var(--ease-out);display:flex;flex-direction:column;padding:92px 24px 24px;overflow-y:auto;box-sizing:border-box}
 .menu-panel.open{transform:translateX(0)}
 .menu-items{display:flex;flex-direction:column;gap:6px}
 .menu-item{opacity:0;transform:translateY(18px) scale(.98);transition:.6s var(--ease-out)}
