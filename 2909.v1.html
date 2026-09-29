@@ -17,7 +17,7 @@ QUICK EDIT: Đổi màu toàn site -> _GLOBAL, Đổi Hero -> HERO_CONFIG, Đổ
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Lê Hà</title>
+<title>I'M LEHA</title>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:wght@300;400;500;600&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
 /* // // ZONE 0: _GLOBAL - BRIEF: Mau font bo goc shadow chung | Global colors fonts radii shadows - La goc thiet ke toan web | Is global design tokens
@@ -368,35 +368,15 @@ const MENU_CONFIG = {
   easing: "cubic-bezier(.16,1,.3,1)",
   staggerDelay: 70,
   items: [
-    { label: "ABOUT ME", href: "#story", desc: "Intro" },
-    { label: "01 · Bắt đầu", href: "#beginning", desc: "Origin", children: [
-      { label: " ", href: "#beginning", desc: "" },
-      { label: " ", href: "#beginning", desc: "" },
-    ]},
-    { label: "02 · Ngành dịch vụ", href: "#hospitality", desc: "Hospitality", children: [
-      { label: "", href: "", desc: "" },
-      { label: "", href: "", desc: "" },
-    ]},
-    { label: "03 · Golf", href: "#golf", desc: "Golf", children: [
-      { label: "", href: "#", desc: "" },
-      { label: "", href: "#", desc: "" },
-    ]},
-    { label: "04 · Event x Marketing", href: "#events", desc: "Events", children: [
-      { label: "", href: "#events", desc: "" },
-      { label: "", href: "#events", desc: "" },
-    ]},
-    { label: "05 · Cách tôi làm việc ", href: "#", desc: "Principles", children: [
-      { label: "", href: "", desc: "" },
-      { label: "", href: "", desc: "" },
-      { label: "", href: "", desc: "" },
-    ]},
-    { label: "06 · Những thứ tôi làm", href: "#", desc: "What I do" },
-    { label: "07 · Projects", href: "#", desc: "Project", children: [
-      { label: "", href: "#", desc: "" },
-      { label: "", href: "#", desc: "" },
-      { label: "", href: "#", desc: "" },
-    ]},
-    { label: "08 · Đang xây", href: "#building", desc: "Building" },
+    { label: "ABOUT ME", href: "#aboutme"},
+    { label: "01 · Where It All Began", href: "#where-it-all-began"},
+    { label: "02 · From the Floor Up", href: "#from-the-floor-up", desc: "From the Floor Up" },
+    { label: "03 · The Golf Chapter", href: "#id=the-golf-chapter", desc: "The Golf Chapter"},
+    { label: "04 · Where Events Meet Marketing", href: "#events", desc: "Where Events Meet Marketing"},
+    { label: "05 · My Operating System", href: "#my-operating-system", desc: "My Operating System"},
+    { label: "06 · Projects Close to My Heart", href: "#projects", desc: "Projects Close to My Heart" },
+    { label: "07 · What I'm Creating Now", href: "#creating-now", desc: "What I'm Creating Now"},
+    { label: "08 · ", href: "#building", desc: "Building" },
   ],
   footer: { email: "leha.pm@golfcare.asia", phone: "(84) 98 3351 744", note: "" }
 };
@@ -481,9 +461,9 @@ function renderMenu(){
   panel.style.backdropFilter=`blur(${MENU_CONFIG.blur}) saturate(1.4)`;
   const itemsHTML=MENU_CONFIG.items.map((it,i)=>{
     const hasSub=it.children && it.children.length;
-    const subHTML=hasSub?`<div class="menu-sub" id="sub-${i}">${it.children.map(c=>`<a href="${c.href}" data-close>${c.label} <span style="opacity:.5">— ${c.desc}</span></a>`).join('')}</div>`:'';
+  const subHTML=hasSub?`<div class="menu-sub" id="sub-${i}">${it.children.map(c=>`<a href="${c.href}" data-close>${c.label}</a>`).join('')}</div>`:'';
     return `<div class="menu-item" style="transition-delay:${i*MENU_CONFIG.staggerDelay}ms">
-      <a class="menu-link ${hasSub?'has-sub':''}" ${hasSub?`data-sub="sub-${i}"`:`href="${it.href}" data-close`}><span>${it.label}</span><span style="font-size:9px;opacity:.45">${it.desc}${hasSub?' ▾':''}</span></a>
+      <a class="menu-link ${hasSub?'has-sub':''}" ${hasSub?`data-sub="sub-${i}"`:`href="${it.href}" data-close`}><span>${it.label}</span>${hasSub?`<span style="font-size:12px;opacity:.8;margin-left:6px">▾</span>`:''}</a>
       ${subHTML}
     </div>`;
   }).join('');
