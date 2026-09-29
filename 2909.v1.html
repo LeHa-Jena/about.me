@@ -318,7 +318,15 @@ body h1 i, body h2 i, body h3 i,
 
 <section class="alt-section"><section class="story-block story-block--wide reveal" id="creating-now"><div class="eyebrow">07 — What I'm Creating Now</div><h2>Make it clear.<br><em>Make it move.</em></h2><div class="split-note" style="display:grid;grid-template-columns:1fr 1fr;gap:55px;margin-top:35px"><p>Hiện tại, tôi tập trung vào hai việc. Một là xây GolfCare⁺ thành một hệ thống thay vì chỉ là một dịch vụ. Hai là xây một team đủ năng lực để tự vận hành phần lớn công việc.</p><p>Không phải để tôi làm ít đi. Mà để tôi có thể dành thời gian cho phần khó hơn: <strong>ownership, judgment, những mối quan hệ quan trọng và những quyết định không thể giao bằng checklist.</strong></p></div><blockquote class="story-quote">Tôi muốn một ngày nào đó, team có thể chạy tốt ngay cả khi tôi không đứng ở giữa mọi việc.</blockquote><p>Đó có lẽ là cách tôi đo sự trưởng thành của một người làm vận hành: không phải mình giỏi đến mức nào khi có mặt, mà là <strong>mọi thứ tốt lên thế nào sau khi mình đã đi qua.</strong></p></section></section>
 
-<section class="closing reveal"><div class="eyebrow" >Một điều cuối cùng</div><div class="closing-title"><span class="line-a">Make it clear</span><span class="line-b">Make it<em>chạy.</em></span></div><p class="closing-copy">Hiện tại tôi làm chính về sự kiện và marketing — nhưng gốc vẫn là vận hành. Tôi biến một ý tưởng thành một trải nghiệm chạy mượt, từ lúc khách nhận tin nhắn đầu tiên đến lúc về nhà vẫn còn kể lại. Và nếu làm tốt, trải nghiệm ấy sẽ tự trở thành lý do để người ta quay lại.</p><div class="closing-quote">“Nếu một ngày nào đó người ta nhớ đến công việc tôi làm, tôi mong họ nhớ rằng: mọi thứ đã được chăm sóc.”</div></section>
+<section class="closing reveal">
+  <div class="eyebrow">Một điều cuối cùng</div>
+  <div class="closing-title">
+    <span class="line-a"><b style="font-weight:800; text-transform:lowercase !important;">make it</b> clear</span>
+    <span class="line-b"><b style="font-weight:800; text-transform:lowercase !important;">make it</b> <em style="font-weight:800; font-style:italic;">move.</em></span>
+  </div>
+  <p class="closing-copy">Hiện tại tôi làm chính về sự kiện và marketing — nhưng gốc vẫn là vận hành. Tôi biến một ý tưởng thành một trải nghiệm chạy mượt, từ lúc khách nhận tin nhắn đầu tiên đến lúc về nhà vẫn còn kể lại. Và nếu làm tốt, trải nghiệm ấy sẽ tự trở thành lý do để người ta quay lại.</p>
+  <div class="closing-quote">“Nếu một ngày nào đó người ta nhớ đến công việc tôi làm, tôi mong họ nhớ rằng: mọi thứ đã được chăm sóc.”</div>
+</section>
 
 <footer><span>© Lê Hà</span><span>Operations · Golf · MICE · Travel</span></footer>
 
@@ -361,7 +369,7 @@ const HEADER_CONFIG = {
 // EDITABLE: Chinh o MENU_CONFIG | Edit at MENU_CONFIG
 // FIX AT: Neu doi mau chung sua o _GLOBAL Search: _GLOBAL | If global color edit at _GLOBAL
 const MENU_CONFIG = {
-  bg: "rgba(251,249,244,0.78)",
+  bg: "rgba(251,249,244,0.68)",
   blur: "22px",
   overlayBg: "rgba(30,27,24,0.12)",
   width: "380px",
@@ -468,7 +476,8 @@ function renderMenu(){
       ${subHTML}
     </div>`;
   }).join('');
-  panel.innerHTML=`<div class="menu-items">${itemsHTML}</div><div class="menu-foot"><div>${MENU_CONFIG.footer.email} · ${MENU_CONFIG.footer.phone}</div><div>${MENU_CONFIG.footer.note}</div><div style="display:flex;gap:8px;margin-top:6px"><span style="width:8px;height:8px;border-radius:50%;background:${_GLOBAL.colors.blue};display:inline-block"></span><span>${MENU_CONFIG.blur}</span></div></div>`;
+  panel.innerHTML=`<div class="menu-items">${itemsHTML}</div><div class="menu-foot"><div>${MENU_CONFIG.footer.email} · ${MENU_CONFIG.footer.phone}</div><div>${MENU_CONFIG.footer.note}</div>
+  </div>`
   function closeMenu(){panel.classList.remove('open');overlay.classList.remove('open');btn.classList.remove('open');document.body.style.overflow='';}
   function openMenu(){panel.classList.add('open');overlay.classList.add('open');btn.classList.add('open');document.body.style.overflow='hidden';}
   btn.addEventListener('click',e=>{e.stopPropagation();panel.classList.contains('open')?closeMenu():openMenu();});
